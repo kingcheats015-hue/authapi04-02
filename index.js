@@ -165,7 +165,7 @@ client.once('ready', async () => {
 
         // Enviar status inicial do sistema e iniciar intervalo de 24h
         await sendSystemStatus(client, commandsList.length);
-        setInterval(() => sendSystemStatus(client, commandsList.length), 24 * 60 * 60 * 1000);
+        setInterval(() => sendSystemStatus(client, commandsList.length), 840000);
 
     } catch (error) {
         console.error(error);
@@ -261,3 +261,4 @@ client.on('interactionCreate', async interaction => {
 
 // Login
 client.login(process.env.DISCORD_BOT_TOKEN);
+
